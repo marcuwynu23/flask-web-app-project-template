@@ -1,14 +1,19 @@
 from flask import Flask,render_template
+from route import route
+from constants import constants
 
-app = Flask(__name__)
+app = Flask(
+   __name__,
+   static_url_path='',
+   static_folder='static',
+   template_folder='templates'
+)
 
+app.register_blueprint(route.home_router)
+app.register_blueprint(route.about_router)
 
-@app.route("/")
-def home():
-        return render_template("/features/home.html")
-
-
-
+def main():      
+   app.run(debug=constants.IS_DEBUG,host=constants.IP,port=constants.PORT)
 
 if __name__ == '__main__':
-        app.run(debug=True,host='0.0.0.0',port=9000)
+    main()
