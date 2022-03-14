@@ -1,4 +1,24 @@
-{% extends 'initial/base.html' %}
+{% extends 'initial/layout.html' %}
 {% block content %}
-  this is home page.
+ <div class="container">
+   <h1 class="fw-bolder">Home</h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi maiores ullam officiis culpa mollitia quis soluta pariatur fugiat fugit excepturi tenetur temporibus quisquam, asperiores quasi laborum error sapiente! Minima, tempora?</p>
+   <table class="table table-responsive table-sm table-bordered"> 
+     <thead class="bg-dark text-light">
+      {% for key,value in data.info[0].items() %}
+        <th>{{ key }}</th>
+      {% endfor %}
+     </thead>
+
+     <tbody>
+      {% for i in data.info %}
+        <tr>
+          {% for _,value in i.items() %}
+            <td>{{value}}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+     </tbody>
+   </table>
+ </div>
 {% endblock %}
