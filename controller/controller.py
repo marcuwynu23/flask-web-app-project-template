@@ -15,7 +15,7 @@ def home_control():
       {'#' : 5,'name' : 'Mark','gender' : 'Male','age' : 23},
       {'#' : 6,'name' : 'Mark','gender' : 'Male','age' : 23},
       {'#' : 7,'name' : 'Mark','gender' : 'Male','age' : 23},
-      {'#' : 8,'name' : 'Mark','gender' : 'Male','age' : 23}      
+      {'#' : 8,'name' : 'Wayne','gender' : 'Male','age' : 23}      
       ]
     }
    
