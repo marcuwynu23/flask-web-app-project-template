@@ -34,3 +34,7 @@ flask_session/
 
 # ignore all files in the .vscode directory
 .vscode /
+
+
+
+*.pyc

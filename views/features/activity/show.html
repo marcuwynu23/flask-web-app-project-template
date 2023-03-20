@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>User Details</title>
+	</head>
+	<body>
+		<h1>User Details</h1>
+		<table>
+			<tr>
+				<td>ID:</td>
+				<td>{{ user[0] }}</td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td>{{ user[1] }}</td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td>{{ user[2] }}</td>
+			</tr>
+		</table>
+		<a href="{{ url_for('activity.edit', id=user[0]) }}">Edit</a>
+		<a href="{{ url_for('activity.delete', id=user[0]) }}">Delete</a>
+	</body>
+</html>

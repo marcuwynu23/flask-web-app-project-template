@@ -1,3 +1,4 @@
 ::ASYNC
-+ wr http://localhost:9000 && python main.py
+$ wr http://127.0.0.1:5000
++ poetry run flask run
 

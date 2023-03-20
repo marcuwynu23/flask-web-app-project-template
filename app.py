@@ -1,7 +1,7 @@
 # IMPORTS
 from flask import Flask,render_template
 from route import route
-from constants import constants
+from route import activity_route
 from flask_session import Session
 
 # CREATE APP
@@ -15,13 +15,11 @@ Session(app)
 app.register_blueprint(route.home_router)
 app.register_blueprint(route.contact_router)
 app.register_blueprint(route.about_router)
-
+app.register_blueprint(activity_route.activity,url_prefix='/activity')
 
 # SERVER CONFIG
 def main():      
-   app.run(debug=constants.IS_DEBUG,host=constants.IP,port=constants.PORT)
-
-
+   app.run(debug=True)
 
 if __name__ == '__main__':
     main()
