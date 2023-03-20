@@ -10,6 +10,7 @@ packages = [{include = "flask_web_app_project_template"}]
 python = "^3.10"
 flask = "^2.2.3"
 flask-session = "^0.4.0"
+flask-login = "^0.6.2"
 
 
 [build-system]
