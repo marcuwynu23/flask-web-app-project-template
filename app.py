@@ -2,6 +2,7 @@
 from flask import Flask,render_template
 from route import route
 from route import activity_route
+from route.api import api
 from flask_session import Session
 
 # CREATE APP
@@ -12,10 +13,15 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+#basic route example
 app.register_blueprint(route.home_router)
 app.register_blueprint(route.contact_router)
 app.register_blueprint(route.about_router)
+
+#crud route example
 app.register_blueprint(activity_route.activity,url_prefix='/activity')
+#api
+app.register_blueprint(api,url_prefix='/api')
 
 # SERVER CONFIG
 def main():      

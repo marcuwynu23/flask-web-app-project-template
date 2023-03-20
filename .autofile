@@ -1,4 +1,6 @@
 ::ASYNC
+# open flask app web link
 $ wr http://127.0.0.1:5000
-+ poetry run flask run
+# run flask app in debug mode
++ poetry run flask run --debug
 
