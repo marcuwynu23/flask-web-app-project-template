@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Create New User</title>
-	</head>
-	<body>
+{% extends 'initial/layout.html' %}
+{% block content %}
 		<h1>Create New User</h1>
 		<form action="{{ url_for('activity.new') }}" method="post">
 			<label>Name:</label>
@@ -12,5 +8,4 @@
 			<input type="email" name="email" /><br />
 			<input type="submit" value="Submit" />
 		</form>
-	</body>
-</html>
+{%endblock %}

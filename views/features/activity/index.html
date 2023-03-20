@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>User List</title>
-	</head>
-	<body>
+{% extends 'initial/layout.html' %}
+{% block content %}
+
 		<h1>User List</h1>
 		<table>
 			<thead>
@@ -30,5 +27,4 @@
 			</tbody>
 		</table>
 		<a href="{{ url_for('activity.new') }}">Create New User</a>
-	</body>
-</html>
+{% endblock %}

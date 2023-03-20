@@ -1,0 +1,18 @@
+{% extends 'initial/blank_layout.html' %} {% block content %}
+<div class="container">
+	<div class="d-flex justify-content-center align-items-center">
+		<form action="{{ url_for('auth.login')}}" method="post">
+			<div>
+				<input name="username" />
+			</div>
+			<div>
+				<input name="password" type="password" />
+			</div>
+			<div class="d-flex-justify-content-center">
+				<button type="submit">submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+{%endblock %}

@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>User Details</title>
-	</head>
-	<body>
+{% extends 'initial/layout.html' %}
+{% block content %}
 		<h1>User Details</h1>
 		<table>
 			<tr>
@@ -21,5 +17,4 @@
 		</table>
 		<a href="{{ url_for('activity.edit', id=user[0]) }}">Edit</a>
 		<a href="{{ url_for('activity.delete', id=user[0]) }}">Delete</a>
-	</body>
-</html>
+{% endblock %}

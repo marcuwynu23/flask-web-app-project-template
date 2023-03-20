@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Edit User</title>
-	</head>
-	<body>
+{% extends 'initial/layout.html' %}
+{% block content %}
 		<h1>Edit User</h1>
 		<form action="{{ url_for('activity.edit', id=user[0]) }}" method="post">
 			<label>Name:</label>
@@ -12,5 +8,4 @@
 			<input type="email" name="email" value="{{ user[2] }}" /><br />
 			<input type="submit" value="Submit" />
 		</form>
-	</body>
-</html>
+{% endblock %}
